@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<opml version="1.0">
+  <head>
+    <title>Pocket Casts Feeds</title>
+    <dateCreated>Tue, 19 Jan 2016 12:13:40 +0000</dateCreated>
+    <dateModified>Tue, 19 Jan 2016 12:13:40 +0000</dateModified>
+  </head>
+  <body>
+    <outline text="feeds">
+      <outline text="Filmspotting" type="rss" xmlUrl="http://feeds.feedburner.com/cinecast"/>
+      <outline text="In Our Time" type="rss" xmlUrl="http://www.bbc.co.uk/programmes/b006qykl/episodes/downloads.rss"/>
+      <outline text="The Joe Rogan Experience" type="rss" xmlUrl="http://joeroganexp.joerogan.libsynpro.com/rss"/>
+      <outline text="Popup Chinese" type="rss" xmlUrl="http://popupchinese.com/feeds/lessons"/>
+      <outline text="The Ruby Rogues" type="rss" xmlUrl="https://devchat.tv/ruby-rogues/feed"/>
+      <outline text="The Q&amp;A with Jeff Goldsmith" type="rss" xmlUrl="http://feeds.feedburner.com/TheQaWithJeffGoldsmith"/>
+      <outline text="NodeUp" type="rss" xmlUrl="HTTP://feeds.feedburner.com/NodeUp"/>
+      <outline text="Dan Carlin's Hardcore History" type="rss" xmlUrl="http://feeds.feedburner.com/dancarlin/history?format=xml"/>
+      <outline text="The /Filmcast" type="rss" xmlUrl="http://feeds.feedburner.com/filmcast"/>
+      <outline text="WTF with Marc Maron Podcast" type="rss" xmlUrl="http://wtfpod.libsyn.com/rss"/>
+      <outline text="This American Life" type="rss" xmlUrl="http://feed.thisamericanlife.org/talpodcast"/>
+      <outline text="The China History Podcast" type="rss" xmlUrl="http://chinahistorypodcast.libsyn.com/rss"/>
+      <outline text="The 7th Avenue Project" type="rss" xmlUrl="http://audio1.cruzio.com/kusp/pod/rpollie.xml"/>
+      <outline text="Kalzumeus Software &#xBB; podcasts" type="rss" xmlUrl="http://www.kalzumeus.com/category/podcasts/feed/"/>
+      <outline text="All Songs Considered" type="rss" xmlUrl="http://www.npr.org/rss/podcast.php?id=510019&amp;uid=n1qe4e85742c986fdb81d2d38ffa0d5d53"/>
+      <outline text="The Doug Stanhope Shotclog Podcast" type="rss" xmlUrl="http://stanhope.libsyn.com/rss"/>
+      <outline text="Exponent" type="rss" xmlUrl="http://exponent.fm/feed/"/>
+      <outline text="Fresh Air" type="rss" xmlUrl="http://www.npr.org/rss/podcast.php?id=381444908"/>
+      <outline text="Giant Bombcast" type="rss" xmlUrl="http://www.giantbomb.com/podcast-xml/giant-bombcast/?"/>
+      <outline text="Common Sense with Dan Carlin" type="rss" xmlUrl="http://feeds.feedburner.com/dancarlin/commonsense?format=xml"/>
+      <outline text="Criminal" type="rss" xmlUrl="http://feeds.feedburner.com/CriminalShow"/>
+      <outline text="Release Notes" type="rss" xmlUrl="http://releasenotes.tv/feed/podcast/"/>
+      <outline text="StartUp Podcast" type="rss" xmlUrl="http://feeds.hearstartup.com/hearstartup"/>
+      <outline text="Kumail Nanjiani's The X-Files Files" type="rss" xmlUrl="http://feeds.feedburner.com/KumailNanjianisTheX-filesFiles"/>
+      <outline text="The Japan Venture Show" type="rss" xmlUrl="http://feeds.feedburner.com/TheJapanVentureShowPodcast"/>
+      <outline text="You Made It Weird with Pete Holmes" type="rss" xmlUrl="http://feeds.feedburner.com/YouMadeItWeird"/>
+      <outline text="Tone Control" type="rss" xmlUrl="HTTP://www.idlethumbs.net/feeds/tonecontrol"/>
+      <outline text="Polygon's Quality Control" type="rss" xmlUrl="HTTP://Feeds.feedburner.com/polygonqualitycontrol"/>
+      <outline text="Polygon Longform" type="rss" xmlUrl="http://feeds.feedburner.com/PolygonLongForm"/>
+      <outline text="Designer Notes" type="rss" xmlUrl="https://www.idlethumbs.net/feeds/designer-notes"/>
+      <outline text="Polygon Minimap" type="rss" xmlUrl="http://feeds.feedburner.com/PolygonMinimapDaily"/>
+      <outline text="Waking Up with Sam Harris" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:59753170/sounds.rss"/>
+      <outline text="KEXP Presents Music That Matters" type="rss" xmlUrl="http://feeds.kexp.org/kexp/musicthatmatters"/>
+      <outline text="Re/code Decode, hosted by Kara Swisher" type="rss" xmlUrl="http://feeds.feedburner.com/Recode-Decode"/>
+      <outline text="Startup School Radio" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:150759713/sounds.rss"/>
+      <outline text="Developer Tea" type="rss" xmlUrl="http://feeds.feedburner.com/DeveloperTea"/>
+      <outline text="Freakonomics Radio" type="rss" xmlUrl="http://feeds.feedburner.com/freakonomicsradio"/>
+      <outline text="Radiolab" type="rss" xmlUrl="http://feeds.wnyc.org/radiolab"/>
+      <outline text="Song Exploder" type="rss" xmlUrl="http://songexploder.libsyn.com/rss"/>
+      <outline text="Planet Money" type="rss" xmlUrl="http://www.npr.org/rss/podcast.php?id=510289"/>
+      <outline text="The Debug Log" type="rss" xmlUrl="http://simplecast.fm/podcasts/1252/rss"/>
+      <outline text="Mysterious Universe" type="rss" xmlUrl="http://mysteriousuniverse.org/feed/podcast/"/>
+      <outline text="The Tim Ferriss Show" type="rss" xmlUrl="http://feeds.feedburner.com/thetimferrissshow"/>
+      <outline text="a16z" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:62921190/sounds.rss"/>
+      <outline text="Developer On Fire" type="rss" xmlUrl="http://feeds.feedburner.com/developeronfire"/>
+      <outline text="Clash Cast Podcast" type="rss" xmlUrl="http://theclashcast.com/feed/feed.xml"/>
+      <outline text="Clash of Clans Podcast" type="rss" xmlUrl="http://feeds.feedburner.com/Clashofclanspodcastcom?format=xml"/>
+    </outline>
+  </body>
+</opml>
+

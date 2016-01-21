@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fHU-UF-BDb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Podcasts-->
+        <scene sceneID="KCq-Ed-dHb">
+            <objects>
+                <tableViewController id="ofH-eK-r9E" customClass="PodcastListVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="exp-kA-TR0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PodcastCell" rowHeight="80" id="zDt-15-5mM" customClass="PodcastCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zDt-15-5mM" id="sh7-0Q-Ae8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L7b-ea-bSe">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="L7b-ea-bSe" secondAttribute="height" multiplier="1:1" id="ebz-1C-dbH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Podcast Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zA-4Q-Xbp">
+                                            <rect key="frame" x="87" y="28" width="505" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="L7b-ea-bSe" secondAttribute="bottom" id="E8P-4Q-vjm"/>
+                                        <constraint firstItem="L7b-ea-bSe" firstAttribute="top" secondItem="sh7-0Q-Ae8" secondAttribute="top" id="Hc6-hK-fWO"/>
+                                        <constraint firstItem="9zA-4Q-Xbp" firstAttribute="trailing" secondItem="sh7-0Q-Ae8" secondAttribute="trailingMargin" id="SJA-8k-JMX"/>
+                                        <constraint firstItem="9zA-4Q-Xbp" firstAttribute="leading" secondItem="L7b-ea-bSe" secondAttribute="trailing" constant="8" symbolic="YES" id="Xrb-rO-76W"/>
+                                        <constraint firstItem="9zA-4Q-Xbp" firstAttribute="centerY" secondItem="L7b-ea-bSe" secondAttribute="centerY" id="lV7-0Z-hBz"/>
+                                        <constraint firstItem="L7b-ea-bSe" firstAttribute="leading" secondItem="sh7-0Q-Ae8" secondAttribute="leading" id="lok-Kq-fIf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="podcastTitle" destination="9zA-4Q-Xbp" id="53m-0O-DXM"/>
+                                    <outlet property="thumbnail" destination="L7b-ea-bSe" id="iQY-dV-RJQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ofH-eK-r9E" id="t8j-Ly-vVx"/>
+                            <outlet property="delegate" destination="ofH-eK-r9E" id="dpE-2V-qcK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Podcasts" id="ZVn-di-Kep">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="4R2-9q-J0V">
+                            <connections>
+                                <action selector="refreshList:" destination="ofH-eK-r9E" id="kte-aJ-ls6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpg-6a-FSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="416"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zfj-jb-lek">
+            <objects>
+                <navigationController id="fHU-UF-BDb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wVG-Zq-s6Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ofH-eK-r9E" kind="relationship" relationship="rootViewController" id="klV-G0-F99"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MzC-4e-LKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98" y="416"/>
+        </scene>
+    </scenes>
+</document>
