@@ -8,19 +8,23 @@
 
 #import "EpisodeListVC.h"
 #import "PodcastModel.h"
+#import "EpisodeModel.h"
 #import "EpisodeCell.h"
 #import "APIManager.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
+@import AVFoundation;
+
 @interface EpisodeListVC ()
 @property (nonatomic, strong) NSArray *episodes;
+@property (nonatomic, strong) AVPlayer *player;
 @end
 
 @implementation EpisodeListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    
+
 //    self.tableView.emptyDataSetSource = self;
 //    self.tableView.emptyDataSetDelegate = self;
 //    self.tableView.tableFooterView = [UIView new]; // remove lines
@@ -52,6 +56,17 @@
     [cell configureCellWithEpisode:episode];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    EpisodeModel *episode = self.episodes[indexPath.row];
+    if (episode.audioUrl) {
+        self.player = [[AVPlayer alloc] initWithURL:episode.audioUrl];
+        [self.player play];
+    }
+    else {
+        [SVProgressHUD showErrorWithStatus:@"No URL for episode!"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
