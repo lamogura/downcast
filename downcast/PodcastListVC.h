@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Podcast+OMPL.h"
+#import "Podcast+OPML.h"
 #import <UIScrollView+EmptyDataSet.h>
 
 @interface PodcastListVC : UITableViewController <PodcastFeedDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>

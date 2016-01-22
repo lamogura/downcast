@@ -21,7 +21,7 @@
 // set upon successful parse
 @property (nonatomic, readonly) NSArray *podcasts;
 
-- (instancetype)initWithOPMLFileData:(NSData *)fileData;
+- (instancetype)initWithOPMLFile:(NSURL *)opmlURL;
 
 // parses the OMPL file, returning success
 - (BOOL)parse;

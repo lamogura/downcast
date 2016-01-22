@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        _podcastTitle = name;
+        _podcastTitle = title;
         _podcastURL = url;
     }
     return self;

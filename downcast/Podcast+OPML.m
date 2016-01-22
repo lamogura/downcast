@@ -6,7 +6,7 @@
 //  Copyright © 2016 StudyStream. All rights reserved.
 //
 
-#import "Podcast+OMPL.h"
+#import "Podcast+OPML.h"
 
 @implementation Podcast (OPML)
 
@@ -14,12 +14,10 @@
     OPMLParser *parser = [[OPMLParser alloc] initWithOPMLFile:opmlURL];
 
     BOOL success = [parser parse];
-    if (success) {
-        parser.podcasts;
-    }
-    else {
+    if (!success ) {
         return nil;
     }
+    return parser.podcasts;
 }
 
 @end
@@ -56,7 +54,7 @@
 
 - (BOOL)parse {
     if (self.xmlParser == nil) {
-        NSLog("No XML parser, data was never loaded.");
+        NSLog(@"No XML parser, data was never loaded.");
         return FALSE;
     }
 

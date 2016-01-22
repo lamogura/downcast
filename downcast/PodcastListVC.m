@@ -43,7 +43,7 @@
 #pragma mark - PodcastFeedDelegate
 -(void)podcastDidGetFeedInfo:(Podcast *)podcast {
     NSInteger idx = [self.podcasts indexOfObject:podcast];
-    NSIndexPath cellPath = [NSIndexPath indexPathForRow:idx inSection:0]
+    NSIndexPath *cellPath = [NSIndexPath indexPathForRow:idx inSection:0];
 
     // reconfigure if we just got info w/ logo url
     PodcastCell *cell = [self.tableView cellForRowAtIndexPath:cellPath];
