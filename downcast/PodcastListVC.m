@@ -30,11 +30,13 @@
 }
 
 - (IBAction)refreshList:(id)sender {
+    [SVProgressHUD showWithStatus:@"Loading..."];
     [[APIManager sharedManger] getPodcastsWithSuccess:^(NSArray *podcasts) {
         self.podcasts = podcasts;
         [self.tableView reloadData];
+        [SVProgressHUD showSuccessWithStatus:@"Done!"];
     } failure:^(NSError *error) {
-        
+        [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
     }];
 }
 
