@@ -14,6 +14,7 @@ target 'downcast' do
 
   # ui
   pod 'DZNEmptyDataSet', '~> 1.7.3'
+  pod 'SVProgressHUD', '~> 2.0-beta6'
 
 end
 

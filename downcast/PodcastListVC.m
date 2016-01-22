@@ -8,6 +8,10 @@
 
 #import "PodcastListVC.h"
 #import "PodcastCell.h"
+#import "APIManager.h"
+#import "EpisodeListVC.h"
+
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface PodcastListVC ()
 @property (nonatomic, strong) NSArray *podcasts;
@@ -26,30 +30,12 @@
 }
 
 - (IBAction)refreshList:(id)sender {
-    NSURL *podcastsURL = [[NSBundle mainBundle] URLForResource:@"podcasts" withExtension:@"opml"];
-    
-    NSArray *casts = [Podcast podcastsFromOPMLFile:podcastsURL];
-    if (casts) {
-        for (Podcast *p in casts) {
-            p.delegate = self;
-            [p refreshFeed];
-        }
-        
-        self.podcasts = casts;
+    [[APIManager sharedManger] getPodcastsWithSuccess:^(NSArray *podcasts) {
+        self.podcasts = podcasts;
         [self.tableView reloadData];
-    }
-}
-
-#pragma mark - PodcastFeedDelegate
--(void)podcastDidGetFeedInfo:(Podcast *)podcast {
-    NSInteger idx = [self.podcasts indexOfObject:podcast];
-    NSIndexPath *cellPath = [NSIndexPath indexPathForRow:idx inSection:0];
-
-    // reconfigure if we just got info w/ logo url
-    PodcastCell *cell = [self.tableView cellForRowAtIndexPath:cellPath];
-    if (cell) {
-        [cell configureCellWithPodcast:podcast];
-    }
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 #pragma mark - DZNEmptyData Datasource/Delegate
@@ -69,11 +55,23 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PodcastCell *cell = (PodcastCell *)[tableView dequeueReusableCellWithIdentifier:@"PodcastCell"];
-    Podcast *podcast = self.podcasts[indexPath.row];
+    PodcastModel *podcast = self.podcasts[indexPath.row];
     
     [cell configureCellWithPodcast:podcast];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    PodcastModel *podcast = self.podcasts[indexPath.row];
+    
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
+    EpisodeListVC *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"EpisodeListVC"];
+    vc.podcast = podcast;
+    [vc loadEpisodes];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -12,6 +12,12 @@
 		CE3984361C50EAE200E2061B /* podcasts.opml in Resources */ = {isa = PBXBuildFile; fileRef = CE3984351C50EAE200E2061B /* podcasts.opml */; };
 		CE3984411C50F46900E2061B /* PodcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3984401C50F46900E2061B /* PodcastCell.m */; };
 		CE7546051C5263AF001E9275 /* Podcast+OPML.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7546041C5263AF001E9275 /* Podcast+OPML.m */; };
+		CE7546081C5280CE001E9275 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7546071C5280CE001E9275 /* SessionManager.m */; };
+		CE75460B1C528324001E9275 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE75460A1C528324001E9275 /* APIManager.m */; };
+		CE75460E1C52851C001E9275 /* PodcastModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE75460D1C52851C001E9275 /* PodcastModel.m */; };
+		CE7546111C5288CF001E9275 /* EpisodeListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7546101C5288CF001E9275 /* EpisodeListVC.m */; };
+		CE7546141C528925001E9275 /* EpisodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7546131C528925001E9275 /* EpisodeModel.m */; };
+		CE7546171C528EB5001E9275 /* EpisodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7546161C528EB5001E9275 /* EpisodeCell.m */; };
 		CEE5F3651C50E7D100F26293 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F3641C50E7D100F26293 /* main.m */; };
 		CEE5F3681C50E7D100F26293 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F3671C50E7D100F26293 /* AppDelegate.m */; };
 		CEE5F36B1C50E7D100F26293 /* PodcastListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F36A1C50E7D100F26293 /* PodcastListVC.m */; };
@@ -30,6 +36,18 @@
 		CE3984401C50F46900E2061B /* PodcastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastCell.m; sourceTree = "<group>"; };
 		CE7546031C5263AF001E9275 /* Podcast+OPML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Podcast+OPML.h"; sourceTree = "<group>"; };
 		CE7546041C5263AF001E9275 /* Podcast+OPML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Podcast+OPML.m"; sourceTree = "<group>"; };
+		CE7546061C5280CE001E9275 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		CE7546071C5280CE001E9275 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		CE7546091C528324001E9275 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		CE75460A1C528324001E9275 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		CE75460C1C52851C001E9275 /* PodcastModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastModel.h; sourceTree = "<group>"; };
+		CE75460D1C52851C001E9275 /* PodcastModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastModel.m; sourceTree = "<group>"; };
+		CE75460F1C5288CF001E9275 /* EpisodeListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeListVC.h; sourceTree = "<group>"; };
+		CE7546101C5288CF001E9275 /* EpisodeListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeListVC.m; sourceTree = "<group>"; };
+		CE7546121C528925001E9275 /* EpisodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeModel.h; sourceTree = "<group>"; };
+		CE7546131C528925001E9275 /* EpisodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeModel.m; sourceTree = "<group>"; };
+		CE7546151C528EB5001E9275 /* EpisodeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeCell.h; sourceTree = "<group>"; };
+		CE7546161C528EB5001E9275 /* EpisodeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeCell.m; sourceTree = "<group>"; };
 		CEE5F3601C50E7D100F26293 /* downcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = downcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE5F3641C50E7D100F26293 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEE5F3661C50E7D100F26293 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,8 +93,16 @@
 		CE3984301C50EA8E00E2061B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CE7546091C528324001E9275 /* APIManager.h */,
+				CE75460A1C528324001E9275 /* APIManager.m */,
+				CE7546121C528925001E9275 /* EpisodeModel.h */,
+				CE7546131C528925001E9275 /* EpisodeModel.m */,
 				CE3984311C50EAA200E2061B /* Podcast.h */,
 				CE3984321C50EAA200E2061B /* Podcast.m */,
+				CE75460C1C52851C001E9275 /* PodcastModel.h */,
+				CE75460D1C52851C001E9275 /* PodcastModel.m */,
+				CE7546061C5280CE001E9275 /* SessionManager.h */,
+				CE7546071C5280CE001E9275 /* SessionManager.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -101,6 +127,8 @@
 		CE39843E1C50F45C00E2061B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CE7546151C528EB5001E9275 /* EpisodeCell.h */,
+				CE7546161C528EB5001E9275 /* EpisodeCell.m */,
 				CE39843F1C50F46900E2061B /* PodcastCell.h */,
 				CE3984401C50F46900E2061B /* PodcastCell.m */,
 			);
@@ -134,6 +162,8 @@
 				CE3984301C50EA8E00E2061B /* model */,
 				CEE5F3661C50E7D100F26293 /* AppDelegate.h */,
 				CEE5F3671C50E7D100F26293 /* AppDelegate.m */,
+				CE75460F1C5288CF001E9275 /* EpisodeListVC.h */,
+				CE7546101C5288CF001E9275 /* EpisodeListVC.m */,
 				CEE5F3691C50E7D100F26293 /* PodcastListVC.h */,
 				CEE5F36A1C50E7D100F26293 /* PodcastListVC.m */,
 				CEE5F36C1C50E7D100F26293 /* Main.storyboard */,
@@ -275,12 +305,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7546081C5280CE001E9275 /* SessionManager.m in Sources */,
+				CE7546171C528EB5001E9275 /* EpisodeCell.m in Sources */,
 				CEE5F36B1C50E7D100F26293 /* PodcastListVC.m in Sources */,
+				CE7546141C528925001E9275 /* EpisodeModel.m in Sources */,
 				CE3984411C50F46900E2061B /* PodcastCell.m in Sources */,
 				CEE5F3681C50E7D100F26293 /* AppDelegate.m in Sources */,
+				CE75460B1C528324001E9275 /* APIManager.m in Sources */,
 				CE3984331C50EAA200E2061B /* Podcast.m in Sources */,
 				CE7546051C5263AF001E9275 /* Podcast+OPML.m in Sources */,
 				CEE5F3651C50E7D100F26293 /* main.m in Sources */,
+				CE7546111C5288CF001E9275 /* EpisodeListVC.m in Sources */,
+				CE75460E1C52851C001E9275 /* PodcastModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

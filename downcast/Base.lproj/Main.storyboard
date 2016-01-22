@@ -66,7 +66,71 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpg-6a-FSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="416"/>
+            <point key="canvasLocation" x="758" y="416"/>
+        </scene>
+        <!--Episode ListVC-->
+        <scene sceneID="Mo6-vJ-6Xw">
+            <objects>
+                <tableViewController storyboardIdentifier="EpisodeListVC" id="hCm-pl-8Br" customClass="EpisodeListVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="sZV-tg-mTt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EpisodeCell" rowHeight="80" id="IIB-LU-lSX" customClass="EpisodeCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IIB-LU-lSX" id="IC7-c2-sSe">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-W9-3yJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="NLg-W9-3yJ" secondAttribute="height" multiplier="1:1" id="Rr9-5v-OQe"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0G1-OS-MrK">
+                                            <rect key="frame" x="87" y="13" width="505" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Q1F-3t-fZd">
+                                            <rect key="frame" x="87" y="42" width="505" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0G1-OS-MrK" firstAttribute="top" secondItem="IC7-c2-sSe" secondAttribute="topMargin" constant="5" id="1h4-1V-FB9"/>
+                                        <constraint firstItem="Q1F-3t-fZd" firstAttribute="trailing" secondItem="0G1-OS-MrK" secondAttribute="trailing" id="4fq-0Z-JiO"/>
+                                        <constraint firstItem="NLg-W9-3yJ" firstAttribute="leading" secondItem="IC7-c2-sSe" secondAttribute="leading" id="Ele-qj-0WL"/>
+                                        <constraint firstItem="Q1F-3t-fZd" firstAttribute="leading" secondItem="0G1-OS-MrK" secondAttribute="leading" id="Jby-ri-eQS"/>
+                                        <constraint firstItem="0G1-OS-MrK" firstAttribute="trailing" secondItem="IC7-c2-sSe" secondAttribute="trailingMargin" id="Rwr-RB-AI2"/>
+                                        <constraint firstItem="0G1-OS-MrK" firstAttribute="leading" secondItem="NLg-W9-3yJ" secondAttribute="trailing" constant="8" symbolic="YES" id="dot-wJ-COE"/>
+                                        <constraint firstItem="Q1F-3t-fZd" firstAttribute="top" secondItem="0G1-OS-MrK" secondAttribute="bottom" constant="8" symbolic="YES" id="fYG-nO-JTx"/>
+                                        <constraint firstItem="NLg-W9-3yJ" firstAttribute="top" secondItem="IC7-c2-sSe" secondAttribute="top" id="uL4-LZ-qt8"/>
+                                        <constraint firstAttribute="bottom" secondItem="NLg-W9-3yJ" secondAttribute="bottom" id="wbo-K5-IQ7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="durationLabel" destination="Q1F-3t-fZd" id="JEF-5D-5ts"/>
+                                    <outlet property="episodeTitle" destination="0G1-OS-MrK" id="Lh0-IM-HCY"/>
+                                    <outlet property="thumbnail" destination="NLg-W9-3yJ" id="MYC-Xw-aMJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hCm-pl-8Br" id="Omz-bK-Ubn"/>
+                            <outlet property="delegate" destination="hCm-pl-8Br" id="LEA-DX-xL0"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJB-VQ-7WW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="417"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zfj-jb-lek">

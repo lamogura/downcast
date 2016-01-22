@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class Podcast;
+@class PodcastModel;
 
 @interface PodcastCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (weak, nonatomic) IBOutlet UILabel *podcastTitle;
 
--(void)configureCellWithPodcast:(Podcast *)podcast;
+-(void)configureCellWithPodcast:(PodcastModel *)podcast;
 
 @end
