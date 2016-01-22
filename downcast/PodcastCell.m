@@ -7,17 +7,17 @@
 //
 
 #import "PodcastCell.h"
-#import "Podcast.h"
+#import "PodcastModel.h"
 #import <UIImageView+AFNetworking.h>
 
 @implementation PodcastCell
 
--(void)configureCellWithPodcast:(Podcast *)p {
+-(void)configureCellWithPodcast:(PodcastModel *)p {
     UIImage *loading = [UIImage imageNamed:@"loading"];
     
-    self.podcastTitle.text = p.podcastTitle;
-    if (p.podcastInfo && p.podcastInfo.logo) {
-        [self.thumbnail setImageWithURL:p.podcastInfo.logo placeholderImage:loading];
+    self.podcastTitle.text = p.title;
+    if (p.imageUrl) {
+        [self.thumbnail setImageWithURL:p.imageUrl placeholderImage:loading];
     }
     else {
         self.thumbnail.image = loading;
