@@ -10,8 +10,8 @@
 		7D33E65B44E3AAFDFF928371 /* libPods-downcast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DBC81910D54F33A9CC5FE2 /* libPods-downcast.a */; };
 		CE3984331C50EAA200E2061B /* Podcast.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3984321C50EAA200E2061B /* Podcast.m */; };
 		CE3984361C50EAE200E2061B /* podcasts.opml in Resources */ = {isa = PBXBuildFile; fileRef = CE3984351C50EAE200E2061B /* podcasts.opml */; };
-		CE39843D1C50EB6500E2061B /* NSArray+OPML.m in Sources */ = {isa = PBXBuildFile; fileRef = CE39843C1C50EB6500E2061B /* NSArray+OPML.m */; };
 		CE3984411C50F46900E2061B /* PodcastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3984401C50F46900E2061B /* PodcastCell.m */; };
+		CE7546051C5263AF001E9275 /* Podcast+OPML.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7546041C5263AF001E9275 /* Podcast+OPML.m */; };
 		CEE5F3651C50E7D100F26293 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F3641C50E7D100F26293 /* main.m */; };
 		CEE5F3681C50E7D100F26293 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F3671C50E7D100F26293 /* AppDelegate.m */; };
 		CEE5F36B1C50E7D100F26293 /* PodcastListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F36A1C50E7D100F26293 /* PodcastListVC.m */; };
@@ -26,10 +26,10 @@
 		CE3984311C50EAA200E2061B /* Podcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Podcast.h; sourceTree = "<group>"; };
 		CE3984321C50EAA200E2061B /* Podcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Podcast.m; sourceTree = "<group>"; };
 		CE3984351C50EAE200E2061B /* podcasts.opml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podcasts.opml; sourceTree = "<group>"; };
-		CE39843B1C50EB6500E2061B /* NSArray+OPML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OPML.h"; sourceTree = "<group>"; };
-		CE39843C1C50EB6500E2061B /* NSArray+OPML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OPML.m"; sourceTree = "<group>"; };
 		CE39843F1C50F46900E2061B /* PodcastCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastCell.h; sourceTree = "<group>"; };
 		CE3984401C50F46900E2061B /* PodcastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastCell.m; sourceTree = "<group>"; };
+		CE7546031C5263AF001E9275 /* Podcast+OPML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Podcast+OPML.h"; sourceTree = "<group>"; };
+		CE7546041C5263AF001E9275 /* Podcast+OPML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Podcast+OPML.m"; sourceTree = "<group>"; };
 		CEE5F3601C50E7D100F26293 /* downcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = downcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE5F3641C50E7D100F26293 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEE5F3661C50E7D100F26293 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 		CE39843A1C50EB4900E2061B /* categories */ = {
 			isa = PBXGroup;
 			children = (
-				CE39843B1C50EB6500E2061B /* NSArray+OPML.h */,
-				CE39843C1C50EB6500E2061B /* NSArray+OPML.m */,
+				CE7546031C5263AF001E9275 /* Podcast+OPML.h */,
+				CE7546041C5263AF001E9275 /* Podcast+OPML.m */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -276,10 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE5F36B1C50E7D100F26293 /* PodcastListVC.m in Sources */,
-				CE39843D1C50EB6500E2061B /* NSArray+OPML.m in Sources */,
 				CE3984411C50F46900E2061B /* PodcastCell.m in Sources */,
 				CEE5F3681C50E7D100F26293 /* AppDelegate.m in Sources */,
 				CE3984331C50EAA200E2061B /* Podcast.m in Sources */,
+				CE7546051C5263AF001E9275 /* Podcast+OPML.m in Sources */,
 				CEE5F3651C50E7D100F26293 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
