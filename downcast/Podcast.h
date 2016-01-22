@@ -13,18 +13,25 @@
 
 @protocol PodcastFeedDelegate <NSObject>
 @optional
-- (void)podcast:(Podcast *)podcast didGetFeedInfo:(MWFeedInfo *)info;
+- (void)podcastDidStartRefresh:(Podcast *)podcast;
+- (void)podcastDidGetFeedInfo:(Podcast *)podcast;
+- (void)podcast:(Podcast *)podcast didFailToRefreshWithError:(NSError *)error;
+- (void)podcastDidFinishRefresh:(Podcast *)podcast;
 @end
 
 @interface Podcast : MTLModel <MWFeedParserDelegate>
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSURL *url;
-@property (nonatomic, strong) MWFeedInfo *podcastInfo;
+@property (nonatomic, readonly) NSString *podcastTitle;
+@property (nonatomic, readonly) NSURL *podcastURL;
 
-@property (nonatomic, unsafe_unretained) id <PodcastFeedDelegate> delegate;
+// set by calling refreshFeed 
+@property (nonatomic, readonly) MWFeedInfo *podcastInfo;
+// episodes
+// more meta data?
 
-- (instancetype)initWithName:(NSString *)name url:(NSURL *)url;
-- (void)fetchFeedInfo;
+@property (nonatomic, weak) id <PodcastFeedDelegate> delegate;
+
+- (instancetype)initWithTitle:(NSString *)title url:(NSURL *)url;
+- (void)refreshFeed;
 
 @end

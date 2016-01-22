@@ -7,18 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Podcast.h"
 
-@interface NSArray (OPML)
+@interface Podcast (OPML)
 
-+ (NSArray *)ss_urlArrayFromOPMLURL:(NSURL *)opmlURL;
++ (NSArray *)podcastsFromOPMLFile:(NSURL *)opmlURL;
 
 @end
 
 
 @interface OPMLParser : NSObject <NSXMLParserDelegate>
 
+// set upon successful parse
+@property (nonatomic, readonly) NSArray *podcasts;
+
 - (instancetype)initWithOPMLFileData:(NSData *)fileData;
 
-- (NSArray *)startParsing;
+// parses the OMPL file, returning success
+- (BOOL)parse;
 
 @end

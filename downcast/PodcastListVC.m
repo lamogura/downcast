@@ -7,9 +7,7 @@
 //
 
 #import "PodcastListVC.h"
-#import "Podcast.h"
 #import "PodcastCell.h"
-#import "NSArray+OPML.h"
 
 @interface PodcastListVC ()
 @property (nonatomic, strong) NSArray *podcasts;
@@ -22,7 +20,7 @@
     
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
-    self.tableView.tableFooterView = [UIView new];
+    self.tableView.tableFooterView = [UIView new]; // remove lines
     
     self.podcasts = [NSArray array];
 }
@@ -30,14 +28,28 @@
 - (IBAction)refreshList:(id)sender {
     NSURL *podcastsURL = [[NSBundle mainBundle] URLForResource:@"podcasts" withExtension:@"opml"];
     
-    NSArray *allPodcats = [NSArray ss_urlArrayFromOPMLURL:podcastsURL];
-    for (Podcast *p in allPodcats) {
-        p.delegate = self;
-        [p fetchFeedInfo];
+    NSArray *casts = [Podcast podcastsFromOPMLFile:podcastsURL];
+    if (casts) {
+        for (Podcast *p in casts) {
+            p.delegate = self;
+            [p refreshFeed];
+        }
+        
+        self.podcasts = casts;
+        [self.tableView reloadData];
     }
-    
-    self.podcasts = allPodcats;
-    [self.tableView reloadData];
+}
+
+#pragma mark - PodcastFeedDelegate
+-(void)podcastDidGetFeedInfo:(Podcast *)podcast {
+    NSInteger idx = [self.podcasts indexOfObject:podcast];
+    NSIndexPath cellPath = [NSIndexPath indexPathForRow:idx inSection:0]
+
+    // reconfigure if we just got info w/ logo url
+    PodcastCell *cell = [self.tableView cellForRowAtIndexPath:cellPath];
+    if (cell) {
+        [cell configureCellWithPodcast:podcast];
+    }
 }
 
 #pragma mark - DZNEmptyData Datasource/Delegate
@@ -51,17 +63,8 @@
 }
 
 #pragma mark - UITableView Datasource/Delegate
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.podcasts.count;
-}
-
--(void)podcast:(Podcast *)podcast didGetFeedInfo:(MWFeedInfo *)info {
-    NSInteger idx = [self.podcasts indexOfObject:podcast];
-    PodcastCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]];
-    if (cell) {
-        [cell configureCellWithPodcast:podcast];
-    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

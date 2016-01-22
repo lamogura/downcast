@@ -12,12 +12,12 @@
 
 @implementation PodcastCell
 
--(void)configureCellWithPodcast:(Podcast *)podcast {
+-(void)configureCellWithPodcast:(Podcast *)p {
     UIImage *loading = [UIImage imageNamed:@"loading"];
     
-    self.podcastTitle.text = podcast.name;
-    if (podcast.podcastInfo && podcast.podcastInfo.logo) {
-        [self.thumbnail setImageWithURL:podcast.podcastInfo.logo placeholderImage:loading];
+    self.podcastTitle.text = p.podcastTitle;
+    if (p.podcastInfo && p.podcastInfo.logo) {
+        [self.thumbnail setImageWithURL:p.podcastInfo.logo placeholderImage:loading];
     }
     else {
         self.thumbnail.image = loading;
